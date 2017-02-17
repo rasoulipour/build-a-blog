@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel = "stylesheet" href="css/style.css" />
+    <title> Daily Garlic Blogs </title>
+  </head>
+
+  <body>
+    <a href = "/blog" class = "main_title">
+      Daily Garlic Blogs  </a>
+
+    <hr>
+
+
+    {% for blog in blogs %}
+    <div class = "essay">
+      <a href = "/blog/{{b}}" class = "blog-title">
+        {{blog.title}} </a>
+      <pre class = "essay_body">{{blog.essay}}</pre>
+    </div>
+    {% endfor %}
+
+  </body>
+</html>

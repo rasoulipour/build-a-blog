@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title> ASCIII!! </title>
-  </head>
+{% extends "base.html" %}
+{% block content %}
 
-  <body>
-    <h1> ASCIIdfI!! </h1>
+{% for p in posts %}
+  {{theblog.render() | safe}}
 
-    <form method= "post">
-      <label>
-        <div> title </div>
-        <input type = "text" name="title" value="{{title}}">
-      </label>
+  {% endfor %}
+    <br><br>
 
-      <label>
-        <div>essay</div>
-        <textarea name = "essay">{{essay}}</textarea>
-      </label>
-      <div class = "error">{{error}}</div>
-      <input type="submit">
-    </form>
-
-    <hr>
-
-    {% for blog in blogs%}
-    <div class = "essay">
-      <div class = "blog-title">{{blog.title}}</div>
-      <pre class = "essay_body">{{blog.essay}}</pre>
-    </div>
-    {% endfor %}
-
-  </body>
-</html>
+{% endblock %}

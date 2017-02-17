@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Post </title>
+    <link type="text/css" rel = "stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1> What is in your mind </h1>
+
+    <form method= "post">
+      <label>
+        <div> title </div>
+        <input type = "text" name="title" value="{{title}}">
+      </label>
+
+      <label>
+        <div>essay</div>
+        <textarea name = "essay">{{essay}}</textarea>
+      </label>
+      <div class = "error">{{error}}</div>
+      <input type="submit">
+    </form>
+  </body>
+</html>
