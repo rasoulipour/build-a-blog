@@ -33,10 +33,10 @@ class MainPage(Handler):
 
 class BlogPage(Handler):
     def get(self):
-        blogs = db.GqlQuery("SELECT * FROM Post ORDER BY created DESc LIMIT 5")
+        blogs = db.GqlQuery("SELECT * FROM Post ORDER BY created DESC LIMIT 5")
         n = blogs.get()
-        b = n.key().id()
-        self.render("posts.html", blogs = blogs, b = str(b))
+        #b = n.key().id()
+        self.render("posts.html", blogs = blogs)
 
 
 class PostPage(Handler):

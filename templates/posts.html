@@ -14,9 +14,9 @@
 
     {% for blog in blogs %}
     <div class = "essay">
-      <a href = "/blog/{{b}}" class = "blog-title">
-        {{blog.title}} </a>
-      <pre class = "essay_body">{{blog.essay}}</pre>
+      <a href = "/blog/{{ blog.key().id() }}" class = "blog-title">
+        {{ blog.title }} </a>
+      <pre class = "essay_body">{{ blog.essay }}</pre>
     </div>
     {% endfor %}
 
